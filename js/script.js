@@ -184,4 +184,13 @@ const getInactiveUsers = users => {
     return notActive;
 };
 
-console.log(getInactiveUsers(users)); // [об'єкт Moore Hensley, об'єкт Ross Vazquez, об'єкт Blackburn Dotson]
+console.log(getInactiveUsers(users));
+
+// Object
+const getUserWithEmail = (users, emails) => {
+  const find = users.find(({ email }) => emails === email);
+  return find;
+};
+
+console.log(getUserWithEmail(users, 'shereeanthony@kog.com')); // {об'єкт користувача Sheree Anthony}
+console.log(getUserWithEmail(users, 'elmahead@omatom.com')); // {об'єкт користувача Elma Head}
